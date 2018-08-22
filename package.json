@@ -1,0 +1,23 @@
+{
+  "name": "password-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nminfobase/password-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nminfobase/password-manager/issues"
+  },
+  "homepage": "https://github.com/nminfobase/password-manager#readme",
+  "dependencies": {
+    "node-persist": "^3.0.1"
+  }
+}

@@ -1,7 +1,21 @@
-const storage = require("node-persist");
-storage.initSync();
+const passwordManager = require("./PasswordManager");
+const yargs = require("yargs")
+                .command(require('./commands/createProfileCommand'))
+                .command(require('./commands/showProfileCommand'))
+                .help()
+                .argv;
 
-function createAccount(account) {
-    var accounts = getItem
-    storage.setItemSync("accounts", $account);
+const objPasswordManager = new passwordManager();
+var strCommand = yargs._[0];
+//create profile
+if (strCommand == "create") {
+    objPasswordManager.createProfile(yargs.name, {
+        username : yargs.username,
+        password: yargs.password
+    });
+}
+
+//Show profiles
+if ( strCommand == "show" ) {
+    objPasswordManager.getProfile(yargs.name);
 }
